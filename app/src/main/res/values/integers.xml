@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Drawer menu images-->
+    <integer-array name="drawerMenuImage">
+        <item>@mipmap/ic_tooltip_outline_plus</item>
+        <item>@mipmap/ic_search</item>
+        <item>@mipmap/ic_newspaper</item>
+        <item>@mipmap/ic_exit_to_app</item>
+    </integer-array>
+</resources>

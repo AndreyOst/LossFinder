@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+            android:id="@+id/navMenuPost"
+            android:orderInCategory="1"
+            android:title="@string/menu_item_AddAdt"
+            android:icon="@mipmap/ic_tooltip_outline_plus"/>
+    <item
+            android:id="@+id/navMenuSearch"
+            android:orderInCategory="2"
+            android:title="@string/menu_item_search"
+            android:icon="@mipmap/ic_magnify"/>
+    <item
+            android:id="@+id/navMenuMyAds"
+            android:orderInCategory="3"
+            android:title="@string/menu_item_myAdt"
+            android:icon="@mipmap/ic_newspaper"/>
+    </group>
+</menu>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">LossFinder</string>
+    <string name="search_title">Search</string>
+
+    <!--MainActivity Search-->
+    <string name="category_name">Категории</string>
+    <string name="type_name">Тип объявления</string>
+
+    <!--Type Ads-->
+    <string name="type_loss">Пропажа</string>
+    <string name="type_found">Находка</string>
+
+    <!--Drawer menu-->
+    <string name="menu_item_AddAdt">Добавить объявление</string>
+    <string name="menu_item_search">Поиск</string>
+    <string name="menu_item_myAdt">Мои объявления</string>
+    <string name="menu_item_Exit">Выход</string>
+
+    <!--Drawer state-->
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+</resources>
