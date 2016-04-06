@@ -1,4 +1,6 @@
-package com.lossfinder.app;
+package com.lossfinder.app.constant;
+
+import com.lossfinder.app.R;
 
 public class Constant {
 

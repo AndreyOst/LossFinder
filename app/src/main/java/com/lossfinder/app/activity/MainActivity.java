@@ -13,7 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import com.lossfinder.app.Constant;
+import com.lossfinder.app.constant.Constant;
 import com.lossfinder.app.R;
 import com.lossfinder.app.fragment.CategoryFragment;
 import com.lossfinder.app.fragment.MyAdsFragment;

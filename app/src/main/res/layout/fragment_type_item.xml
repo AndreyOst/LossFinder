@@ -4,9 +4,9 @@
 
     <ImageView
             android:id="@+id/ivTypeImageItem"
-            style="@style/ivCategoryItem"/>
+            style="@style/imgCategoryItem"/>
     <TextView
             android:id="@+id/tvTypeNameItem"
-            style="@style/tvCategoryItem"/>
+            style="@style/txtCategoryItem"/>
 
 </LinearLayout>

@@ -9,6 +9,41 @@
         <item name="titleTextColor">@color/colorWhite</item>
     </style>
 
+
+    <!--NavigationHeader-->
+    <!--LinearLayout for a NavigationHeader-->
+    <style name="llNavHeader">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <!--TextLogin for a NavigationHeader-->
+    <style name="txtLoginNavHeader" parent="android:style/TextAppearance.Medium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">@string/account_name</item>
+    </style>
+    <!--TextEmail for a NavigationHeader-->
+    <style name="txtEmailNavHeader">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">@string/account_email</item>
+    </style>
+    <!--ImageAccount for a NavigationHeader-->
+    <style name="imgAccount">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@mipmap/ic_account</item>
+    </style>
+
+
+    <!--CategoryFragment/TypeFragment-->
     <!--LinearLayout for a list item-->
     <style name="llCategoryItem">
         <item name="android:orientation">horizontal</item>
@@ -16,9 +51,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:showDividers">end</item>
     </style>
-
     <!--List header-->
-    <style name="tvCategoryName" parent="@android:style/TextAppearance.Large">
+    <style name="txtCategoryName" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
@@ -27,16 +61,14 @@
         <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
-
     <!--Text list item-->
-    <style name="tvCategoryItem" parent="@android:style/TextAppearance.Medium">
+    <style name="txtCategoryItem" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
-
     <!--Image list Item-->
-    <style name="ivCategoryItem">
+    <style name="imgCategoryItem">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginLeft">10dp</item>

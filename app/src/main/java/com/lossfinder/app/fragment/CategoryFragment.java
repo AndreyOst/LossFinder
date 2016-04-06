@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import com.lossfinder.app.Constant;
-import com.lossfinder.app.R;
+import com.lossfinder.app.constant.Constant;
 import com.lossfinder.app.adapter.CategoryAdapter;
 import com.lossfinder.app.listener.OnCategorySelectedListener;
 

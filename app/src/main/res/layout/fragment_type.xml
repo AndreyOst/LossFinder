@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <TextView
-            style="@style/tvCategoryName"
+            style="@style/txtCategoryName"
             android:text="@string/type_name"/>
     <ListView
             android:id="@+id/lvType"

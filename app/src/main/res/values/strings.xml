@@ -20,4 +20,7 @@
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
 
+    <!--Drawer header-->
+    <string name="account_name">Войдите или</string>
+    <string name="account_email">зарегистрируйтесь</string>
 </resources>
