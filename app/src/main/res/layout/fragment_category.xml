@@ -7,7 +7,7 @@
             style="@style/txtCategoryName"
             android:text="@string/category_name"/>
     <ListView
-            android:id="@+id/lvCategory"
+            android:id="@+id/list_view_category"
             android:layout_height="match_parent"
             android:layout_width="match_parent">
     </ListView>

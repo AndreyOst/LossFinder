@@ -147,13 +147,13 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
             // Update the main content by replacing fragments
             Fragment fragment = null;
             switch (menuItem.getItemId()) {
-                case R.id.navMenuPost:
+                case R.id.nav_menu_post:
                     fragment = new PostFragment();
                     break;
-                case R.id.navMenuSearch:
+                case R.id.nav_menu_search:
                     fragment = categoryFragment;
                     break;
-                case R.id.navMenuMyAds:
+                case R.id.nav_menu_my_ads:
                     fragment = new MyAdsFragment();
                     break;
             }

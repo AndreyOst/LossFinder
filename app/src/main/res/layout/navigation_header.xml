@@ -5,9 +5,9 @@
     <ImageView
             style="@style/imgAccount"/>
     <TextView
-            android:id="@+id/tvLogin"
+            android:id="@+id/text_view_login"
             style="@style/txtLoginNavHeader"/>
     <TextView
-            android:id="@+id/tvEmail"
+            android:id="@+id/text_view_email"
             style="@style/txtEmailNavHeader"/>
 </LinearLayout>

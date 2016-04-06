@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import com.lossfinder.app.R;
 
@@ -50,8 +49,8 @@ public class CategoryAdapter extends BaseAdapter {
             view = convertView;
         }
 
-        ImageView ivCategory = (ImageView) view.findViewById(R.id.ivCategoryImageItem);
-        TextView tvCategory = (TextView) view.findViewById(R.id.tvCategoryNameItem);
+        ImageView ivCategory = (ImageView) view.findViewById(R.id.img_category_item);
+        TextView tvCategory = (TextView) view.findViewById(R.id.txt_category_item);
         ivCategory.setImageResource(image[position]);
         tvCategory.setText(category[position]);
 

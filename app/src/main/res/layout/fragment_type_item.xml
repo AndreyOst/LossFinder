@@ -3,10 +3,10 @@
               style="@style/llCategoryItem">
 
     <ImageView
-            android:id="@+id/ivTypeImageItem"
+            android:id="@+id/img_type_item"
             style="@style/imgCategoryItem"/>
     <TextView
-            android:id="@+id/tvTypeNameItem"
+            android:id="@+id/txt_type_item"
             style="@style/txtCategoryItem"/>
 
 </LinearLayout>

@@ -9,6 +9,13 @@
         <item name="titleTextColor">@color/colorWhite</item>
     </style>
 
+    <!--Toolbar-->
+    <style name="toolbar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
 
     <!--NavigationHeader-->
     <!--LinearLayout for a NavigationHeader-->
@@ -77,6 +84,7 @@
         <item name="android:layout_marginBottom">5dp</item>
     </style>
 
+
     <!--Floating Action Button-->
     <style name="fab" parent="Widget.Design.FloatingActionButton">
         <item name="android:layout_height">wrap_content</item>
@@ -87,6 +95,34 @@
         <item name="backgroundTint">@color/colorPrimary</item>
         <item name="rippleColor">@color/colorWhite</item>
         <item name="fabSize">normal</item>
+    </style>
+
+
+    <!--LoginActivity-->
+    <!--Login Layout-->
+    <style name="login_layout" parent="Widget.Design.TextInputLayout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+    <!--Edit Text with Hint-->
+    <style name="edit_text_hint" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+    <!--Edit Text username with Hint-->
+    <style name="edit_text_username" parent="edit_text_hint">
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:hint">@string/hint_username</item>
+    </style>
+    <!--Edit Text password with Hint-->
+    <style name="edit_text_password" parent="edit_text_hint">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:hint">@string/hint_password</item>
     </style>
 
 </resources>

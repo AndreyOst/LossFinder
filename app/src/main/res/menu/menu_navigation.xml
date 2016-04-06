@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
     <item
-            android:id="@+id/navMenuPost"
+            android:id="@+id/nav_menu_post"
             android:orderInCategory="1"
             android:title="@string/menu_item_AddAdt"
             android:icon="@mipmap/ic_tooltip_outline_plus"/>
     <item
-            android:id="@+id/navMenuSearch"
+            android:id="@+id/nav_menu_search"
             android:orderInCategory="2"
             android:title="@string/menu_item_search"
             android:icon="@mipmap/ic_magnify"/>
     <item
-            android:id="@+id/navMenuMyAds"
+            android:id="@+id/nav_menu_my_ads"
             android:orderInCategory="3"
             android:title="@string/menu_item_myAdt"
             android:icon="@mipmap/ic_newspaper"/>

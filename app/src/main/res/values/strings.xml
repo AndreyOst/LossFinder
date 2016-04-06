@@ -23,4 +23,9 @@
     <!--Drawer header-->
     <string name="account_name">Войдите или</string>
     <string name="account_email">зарегистрируйтесь</string>
+
+    <!--Login-->
+    <string name="hint_username">Адрес электронной почты</string>
+    <string name="hint_password">Пароль</string>
+    <string name="sign_in">Войти</string>
 </resources>
