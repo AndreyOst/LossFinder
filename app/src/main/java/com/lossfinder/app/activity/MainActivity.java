@@ -64,11 +64,11 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
     }
 
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(Constant.MAIN_TOOLBAR);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             toolbar.setTitle(R.string.app_name);
-            toolbar.setNavigationIcon(R.mipmap.ic_drawer);
+            toolbar.setNavigationIcon(Constant.MAIN_ICON_DRAWER);
         }
     }
 

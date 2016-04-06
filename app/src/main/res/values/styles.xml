@@ -9,6 +9,12 @@
         <item name="titleTextColor">@color/colorWhite</item>
     </style>
 
+    <!--Default button style-->
+    <style name="button_default" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
     <!--Toolbar-->
     <style name="toolbar">
         <item name="android:layout_height">?attr/actionBarSize</item>
@@ -26,7 +32,7 @@
         <item name="android:padding">16dp</item>
         <item name="android:background">@color/colorPrimary</item>
     </style>
-    <!--TextLogin for a NavigationHeader-->
+    <!--TextView Login for a NavigationHeader-->
     <style name="txtLoginNavHeader" parent="android:style/TextAppearance.Medium">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -35,14 +41,14 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:text">@string/account_name</item>
     </style>
-    <!--TextEmail for a NavigationHeader-->
+    <!--TextView Email for a NavigationHeader-->
     <style name="txtEmailNavHeader">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:text">@string/account_email</item>
     </style>
-    <!--ImageAccount for a NavigationHeader-->
+    <!--ImageView Account for a NavigationHeader-->
     <style name="imgAccount">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -99,30 +105,46 @@
 
 
     <!--LoginActivity-->
-    <!--Login Layout-->
+    <!--TextInputLayout Login-->
     <style name="login_layout" parent="Widget.Design.TextInputLayout">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
     </style>
-    <!--Edit Text with Hint-->
+    <!--EditText with Hint-->
     <style name="edit_text_hint" parent="Widget.AppCompat.EditText">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
         <item name="android:ellipsize">none</item>
     </style>
-    <!--Edit Text username with Hint-->
+    <!--EditText username with Hint-->
     <style name="edit_text_username" parent="edit_text_hint">
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:hint">@string/hint_username</item>
     </style>
-    <!--Edit Text password with Hint-->
+    <!--EditText password with Hint-->
     <style name="edit_text_password" parent="edit_text_hint">
         <item name="android:inputType">textPassword</item>
         <item name="android:hint">@string/hint_password</item>
     </style>
-
+    <!--Button Sign In-->
+    <style name="btn_sign_in" parent="button_default">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:text">@string/sign_in</item>
+    </style>
+    <!--TextView Fogot Passwort-->
+    <style name="text_view_fogot_password">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:text">@string/fogot_password</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <!--Button Registration-->
+    <style name="btn_registration" parent="button_default">
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:text">@string/registration</item>
+    </style>
 </resources>

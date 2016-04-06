@@ -25,7 +25,10 @@
     <string name="account_email">зарегистрируйтесь</string>
 
     <!--Login-->
+    <string name="login_toolbar_title">Вход в личный кабинет</string>
     <string name="hint_username">Адрес электронной почты</string>
     <string name="hint_password">Пароль</string>
     <string name="sign_in">Войти</string>
+    <string name="fogot_password">Забыли пароль?</string>
+    <string name="registration">Зарегистрироваться</string>
 </resources>
