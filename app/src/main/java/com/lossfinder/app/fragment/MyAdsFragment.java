@@ -9,9 +9,12 @@ import android.view.ViewGroup;
 import com.lossfinder.app.R;
 
 public class MyAdsFragment extends Fragment{
+
+    private static final int FRAGMENT_LAYOUT = R.layout.fragment_my_ads;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_my_ads, container, false);
+        return inflater.inflate(FRAGMENT_LAYOUT, container, false);
     }
 }

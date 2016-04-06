@@ -13,36 +13,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import com.lossfinder.app.Constant;
 import com.lossfinder.app.R;
-import com.lossfinder.app.fragment.*;
-import com.lossfinder.app.interfaces.OnCategorySelectedListener;
+import com.lossfinder.app.fragment.CategoryFragment;
+import com.lossfinder.app.fragment.MyAdsFragment;
+import com.lossfinder.app.fragment.PostFragment;
+import com.lossfinder.app.fragment.TypeFragment;
+import com.lossfinder.app.listener.OnCategorySelectedListener;
 
 public class MainActivity extends AppCompatActivity implements OnCategorySelectedListener {
 
-    private static final int LAYOUT = R.layout.activity_main;
-    private static final int THEME = R.style.AppTheme;
-    private static final int CONTENT_CONTAINER = R.id.MainContent;
     private static long backPressed;
 
     private FragmentManager manager;
     private CategoryFragment categoryFragment;
-    private FragmentTransaction transaction;
-    private TypeFragment typeFragment;
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private CharSequence toolbarTitle;
-    private NavigationView nvDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(THEME);
+        setTheme(Constant.THEME);
         super.onCreate(savedInstanceState);
-        setContentView(LAYOUT);
+        setContentView(Constant.MAIN_LAYOUT);
 
         manager = getSupportFragmentManager();
-        typeFragment = new TypeFragment();
         categoryFragment = new CategoryFragment();
 
         initToolbar();
@@ -55,6 +52,16 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         }
     }
 
+    /**
+     * Replacing fragment when choosing a category
+     */
+    @Override
+    public void onCategorySelected() {
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(Constant.MAIN_CONTENT_CONTAINER, new TypeFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 
     private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -65,15 +72,9 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         }
     }
 
-    private void initCategoryFragment() {
-        transaction = manager.beginTransaction();
-        transaction.add(CONTENT_CONTAINER, categoryFragment);
-        transaction.commit();
-    }
-
     private void initNavigation() {
         toolbarTitle = getTitle();
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawerLayout = (DrawerLayout) findViewById(Constant.MAIN_DRAWER_LAYOUT);
 
         toggle = new ActionBarDrawerToggle(
                 this,
@@ -97,18 +98,13 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         toggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(toggle);
 
-        nvDrawer = (NavigationView) findViewById(R.id.navigationDrawer);
+        NavigationView nvDrawer = (NavigationView) findViewById(Constant.MAIN_NAVIGATION_DRAWER);
         nvDrawer.setNavigationItemSelectedListener(new DrawerMenuItemClickListener());
     }
 
-    /**
-     * Replacing fragment when choosing a category
-     */
-    @Override
-    public void OnCategorySelected() {
-        transaction = manager.beginTransaction();
-        transaction.replace(CONTENT_CONTAINER, typeFragment);
-        transaction.addToBackStack(null);
+    private void initCategoryFragment() {
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(Constant.MAIN_CONTENT_CONTAINER, categoryFragment);
         transaction.commit();
     }
 
@@ -155,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
                     fragment = new PostFragment();
                     break;
                 case R.id.navMenuSearch:
-                    fragment = new SearchFragment();
+                    fragment = categoryFragment;
                     break;
                 case R.id.navMenuMyAds:
                     fragment = new MyAdsFragment();
@@ -164,8 +160,8 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 
             // Insert the fragment by replacing any existing fragment
             if (fragment != null) {
-                transaction = manager.beginTransaction();
-                transaction.replace(CONTENT_CONTAINER, fragment);
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(Constant.MAIN_CONTENT_CONTAINER, fragment);
                 transaction.commit();
 
                 // Highlight the selected item, update the title, and close the drawer

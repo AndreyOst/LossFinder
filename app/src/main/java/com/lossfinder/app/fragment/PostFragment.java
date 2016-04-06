@@ -10,9 +10,11 @@ import com.lossfinder.app.R;
 
 public class PostFragment extends Fragment {
 
+    private static final int FRAGMENT_LAYOUT = R.layout.fragment_post;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_post, container, false);
+        return inflater.inflate(FRAGMENT_LAYOUT, container, false);
     }
 }

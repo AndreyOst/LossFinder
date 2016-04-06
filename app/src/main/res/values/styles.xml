@@ -9,6 +9,7 @@
         <item name="titleTextColor">@color/colorWhite</item>
     </style>
 
+    <!--LinearLayout for a list item-->
     <style name="llCategoryItem">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_height">wrap_content</item>
@@ -16,6 +17,7 @@
         <item name="android:showDividers">end</item>
     </style>
 
+    <!--List header-->
     <style name="tvCategoryName" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -26,12 +28,14 @@
         <item name="android:layout_marginBottom">10dp</item>
     </style>
 
+    <!--Text list item-->
     <style name="tvCategoryItem" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
+    <!--Image list Item-->
     <style name="ivCategoryItem">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
