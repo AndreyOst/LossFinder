@@ -23,6 +23,9 @@ public class Constant {
     public static final int TYPE_FRAGMENT_LAYOUT = R.layout.fragment_type;
     public static final int TYPE_FRAGMENT_LIST = R.id.list_view_type;
 
+    //MyAdsFragment
+    public static final int MY_ADS_FRAGMENT_LAYOUT = R.layout.fragment_my_ads;
+
     //LoginActivity
     public static final int LOGIN_LAYOUT = R.layout.activity_login;
     public static final int LOGIN_EMAIL_LAYOUT = R.id.login_layout;

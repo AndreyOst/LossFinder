@@ -92,15 +92,16 @@
 
 
     <!--Floating Action Button-->
-    <style name="fab" parent="Widget.Design.FloatingActionButton">
+    <style name="fab">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_margin">16dp</item>
-        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:layout_gravity">bottom|right</item>
         <item name="android:src">@mipmap/ic_plus</item>
-        <item name="backgroundTint">@color/colorPrimary</item>
-        <item name="rippleColor">@color/colorWhite</item>
-        <item name="fabSize">normal</item>
+        <item name="fab_colorNormal">@color/colorPrimary</item>
+        <item name="fab_type">normal</item>
+        <!--fab:fab_colorPressed="@color/primary_pressed"-->
+        <!--fab:fab_colorRipple="@color/ripple"-->
     </style>
 
 

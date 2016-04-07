@@ -7,14 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.lossfinder.app.R;
+import com.lossfinder.app.constant.Constant;
 
 public class MyAdsFragment extends Fragment{
 
-    private static final int FRAGMENT_LAYOUT = R.layout.fragment_my_ads;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(FRAGMENT_LAYOUT, container, false);
+        return inflater.inflate(Constant.MY_ADS_FRAGMENT_LAYOUT, container, false);
     }
 }
