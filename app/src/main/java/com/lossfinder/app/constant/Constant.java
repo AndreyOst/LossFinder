@@ -10,8 +10,9 @@ public class Constant {
     public static final int MAIN_LAYOUT = R.layout.activity_main;
     public static final int MAIN_DRAWER_LAYOUT = R.id.drawer_layout;
     public static final int MAIN_CONTENT_CONTAINER = R.id.main_content;
-    public static final int MAIN_NAVIGATION_DRAWER = R.id.navigation_drawer;
     public static final int MAIN_TOOLBAR = R.id.main_toolbar;
+    public static final int MAIN_NAVIGATION_DRAWER = R.id.navigation_drawer;
+    public static final int MAIN_NAVIGATION_HEADER = R.id.navigation_header;
     public static final int MAIN_ICON_DRAWER = R.mipmap.ic_drawer;
     public static final int BACK_PRESSED_TIMEOUT = 2000;
 

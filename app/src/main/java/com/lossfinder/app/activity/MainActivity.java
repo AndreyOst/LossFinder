@@ -13,8 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import com.lossfinder.app.constant.Constant;
 import com.lossfinder.app.R;
+import com.lossfinder.app.constant.Constant;
 import com.lossfinder.app.fragment.CategoryFragment;
 import com.lossfinder.app.fragment.MyAdsFragment;
 import com.lossfinder.app.fragment.PostFragment;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(Constant.THEME);
+        //setTheme(Constant.THEME);
         super.onCreate(savedInstanceState);
         setContentView(Constant.MAIN_LAYOUT);
 
@@ -44,13 +44,14 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 
         initToolbar();
 
-        initNavigation();
-
         //First start load CategoryFragment
         if (savedInstanceState == null) {
             initCategoryFragment();
         }
+
+        initNavigation();
     }
+
 
     /**
      * Replacing fragment when choosing a category
@@ -108,11 +109,13 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         transaction.commit();
     }
 
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred
         toggle.syncState();
+
     }
 
     @Override
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggles
         toggle.onConfigurationChanged(newConfig);
+
     }
 
     @Override
