@@ -13,8 +13,7 @@
                 style="@style/toolbar"/>
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-            android:orientation="vertical"
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp">
@@ -31,7 +30,8 @@
         <!--Password-->
         <android.support.design.widget.TextInputLayout
                 android:id="@+id/password_layout"
-                style="@style/login_layout">
+                style="@style/login_layout"
+                android:layout_below="@+id/login_layout">
             <EditText
                     android:id="@+id/edit_text_password"
                     style="@style/edit_text_password"/>
@@ -40,16 +40,19 @@
         <!--Sign in-->
         <Button
                 android:id="@+id/btn_sign_in"
-                style="@style/btn_sign_in"/>
+                style="@style/btn_sign_in"
+                android:layout_below="@+id/password_layout"/>
 
         <!--Fogot password-->
         <TextView
                 android:id="@+id/text_fogot_password"
-                style="@style/text_view_fogot_password"/>
-        <!--Registration-->
+                style="@style/text_view_fogot_password"
+                android:layout_below="@+id/btn_sign_in"/>
 
+        <!--Registration-->
         <Button
                 android:id="@+id/btn_registration"
-                style="@style/btn_registration"/>
-    </LinearLayout>
+                style="@style/btn_registration"
+                android:layout_alignParentBottom = "true"/>
+    </RelativeLayout>
 </LinearLayout>

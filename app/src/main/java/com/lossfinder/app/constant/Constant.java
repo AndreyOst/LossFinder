@@ -8,8 +8,8 @@ public class Constant {
 
     //MainActivity
     public static final int MAIN_LAYOUT = R.layout.activity_main;
-    public static final int MAIN_CONTENT_CONTAINER = R.id.main_content;
     public static final int MAIN_DRAWER_LAYOUT = R.id.drawer_layout;
+    public static final int MAIN_CONTENT_CONTAINER = R.id.main_content;
     public static final int MAIN_NAVIGATION_DRAWER = R.id.navigation_drawer;
     public static final int MAIN_TOOLBAR = R.id.main_toolbar;
     public static final int MAIN_ICON_DRAWER = R.mipmap.ic_drawer;
@@ -22,4 +22,13 @@ public class Constant {
     //TypeFragment
     public static final int TYPE_FRAGMENT_LAYOUT = R.layout.fragment_type;
     public static final int TYPE_FRAGMENT_LIST = R.id.list_view_type;
+
+    //LoginActivity
+    public static final int LOGIN_LAYOUT = R.layout.activity_login;
+    public static final int LOGIN_EMAIL_LAYOUT = R.id.login_layout;
+    public static final int LOGIN_PASSWORD_LAYOUT = R.id.password_layout;
+    public static final int LOGIN_EMAIL = R.id.edit_text_username;
+    public static final int LOGIN_PASSWORD = R.id.edit_text_password;
+    public static final int LOGIN_ERROR = R.string.login_error;
+
 }

@@ -31,4 +31,5 @@
     <string name="sign_in">Войти</string>
     <string name="fogot_password">Забыли пароль?</string>
     <string name="registration">Зарегистрироваться</string>
+    <string name="login_error">Поле не может быть пустым</string>
 </resources>

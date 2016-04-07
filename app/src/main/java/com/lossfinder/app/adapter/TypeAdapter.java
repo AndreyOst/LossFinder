@@ -44,6 +44,7 @@ public class TypeAdapter extends BaseAdapter {
         } else {
             view = convertView;
         }
+
         ImageView ivType = (ImageView) view.findViewById(R.id.img_type_item);
         TextView tvType = (TextView) view.findViewById(R.id.txt_type_item);
         ivType.setImageResource(image[position]);
