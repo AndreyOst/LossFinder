@@ -3,6 +3,7 @@ package com.lossfinder.app.listener;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import com.lossfinder.app.activity.LoginActivity;
 
 public class NavigationHeaderOnClickListener implements View.OnClickListener {

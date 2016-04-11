@@ -1,5 +1,7 @@
 package com.lossfinder.app.activity;
 
+import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,12 +15,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import com.lossfinder.app.R;
 import com.lossfinder.app.constant.Constant;
 import com.lossfinder.app.fragment.CategoryFragment;
 import com.lossfinder.app.fragment.MyAdsFragment;
 import com.lossfinder.app.fragment.PostFragment;
 import com.lossfinder.app.fragment.TypeFragment;
+import com.lossfinder.app.listener.NavigationHeaderOnClickListener;
 import com.lossfinder.app.listener.OnCategorySelectedListener;
 
 public class MainActivity extends AppCompatActivity implements OnCategorySelectedListener {
@@ -35,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //setTheme(Constant.THEME);
         super.onCreate(savedInstanceState);
         setContentView(Constant.MAIN_LAYOUT);
 
@@ -51,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 
         initNavigation();
     }
-
 
     /**
      * Replacing fragment when choosing a category
@@ -71,6 +73,12 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
             toolbar.setTitle(R.string.app_name);
             toolbar.setNavigationIcon(Constant.MAIN_ICON_DRAWER);
         }
+    }
+
+    @Override
+    public void setTitle(CharSequence title) {
+        toolbarTitle = title;
+        getSupportActionBar().setTitle(toolbarTitle);
     }
 
     private void initNavigation() {
@@ -99,8 +107,13 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
         toggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(toggle);
 
-        NavigationView nvDrawer = (NavigationView) findViewById(Constant.MAIN_NAVIGATION_DRAWER);
+        NavigationView nvDrawer = (NavigationView) findViewById(Constant.MAIN_NAVIGATION_VIEW);
         nvDrawer.setNavigationItemSelectedListener(new DrawerMenuItemClickListener());
+
+        //The click listener for Header in the navigation drawer
+        View navHeader = nvDrawer.getHeaderView(0);
+        LinearLayout linearLayout = (LinearLayout) navHeader.findViewById(Constant.MAIN_NAVIGATION_HEADER_LINEAR_LAYOUT);
+        linearLayout.setOnClickListener(new NavigationHeaderOnClickListener(this));
     }
 
     private void initCategoryFragment() {
@@ -141,6 +154,7 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
 //        }
     }
 
+
     /**
      * The click listener for Menu in the navigation drawer
      */
@@ -171,17 +185,14 @@ public class MainActivity extends AppCompatActivity implements OnCategorySelecte
                 // Highlight the selected item, update the title, and close the drawer
                 menuItem.setChecked(true);
                 setTitle(menuItem.getTitle());
+
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
             return true;
         }
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        toolbarTitle = title;
-        getSupportActionBar().setTitle(toolbarTitle);
-    }
+
 }
 
 

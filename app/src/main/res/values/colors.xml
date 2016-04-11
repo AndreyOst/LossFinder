@@ -4,5 +4,5 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="mainBackground">#ECEFF1</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorActivated">#CFD8DC</color>
+    <color name="colorNavMenuActivated">#CFD8DC</color>
 </resources>

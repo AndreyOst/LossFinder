@@ -31,12 +31,11 @@
 
     <!--Navigation Drawer-->
     <android.support.design.widget.NavigationView
-            android:id="@+id/navigation_drawer"
+            android:id="@+id/navigation_view"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:layout_gravity="start"
-            app:itemIconTint="@color/colorPrimaryDark"
-            app:itemBackground="@drawable/activated_background"
+            app:itemBackground="@drawable/nav_view_item_background"
             app:itemTextAppearance="@android:style/TextAppearance.Medium"
             app:menu="@menu/menu_navigation"
             app:headerLayout="@layout/navigation_header"/>
